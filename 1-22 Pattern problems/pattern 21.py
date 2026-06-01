@@ -1,10 +1,20 @@
-# pattern 21
-# TODO: Implement the pattern logic for pattern 21.
+"""Pattern 21: Print a hollow star square pattern with spaces.
+
+Example for n = 4:
+* * * *
+*     *
+*     *
+* * * *
+"""
 
 def print_pattern(n):
-    """Print the pattern for the given value of n."""
-    pass
+    """Print a hollow star square pattern of size n."""
+    for i in range(1, n + 1):
+        if i == 1 or i == n:
+            print(' '.join(['*'] * n))
+        else:
+            print('*' + ' ' * (2 * n - 3) + '*')
 
 
 if __name__ == '__main__':
-    print_pattern(5)
+    print_pattern(4)
